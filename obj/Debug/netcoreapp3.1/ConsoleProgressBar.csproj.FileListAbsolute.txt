@@ -1,0 +1,11 @@
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.exe
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.deps.json
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.runtimeconfig.json
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.runtimeconfig.dev.json
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.dll
+E:\_coding\repository_github\ConsoleProgressBar\bin\Debug\netcoreapp3.1\ConsoleProgressBar.pdb
+E:\_coding\repository_github\ConsoleProgressBar\obj\Debug\netcoreapp3.1\ConsoleProgressBar.csprojAssemblyReference.cache
+E:\_coding\repository_github\ConsoleProgressBar\obj\Debug\netcoreapp3.1\ConsoleProgressBar.AssemblyInfoInputs.cache
+E:\_coding\repository_github\ConsoleProgressBar\obj\Debug\netcoreapp3.1\ConsoleProgressBar.AssemblyInfo.cs
+E:\_coding\repository_github\ConsoleProgressBar\obj\Debug\netcoreapp3.1\ConsoleProgressBar.dll
+E:\_coding\repository_github\ConsoleProgressBar\obj\Debug\netcoreapp3.1\ConsoleProgressBar.pdb
