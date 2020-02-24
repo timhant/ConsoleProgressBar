@@ -1,7 +1,7 @@
 /* File Comments
  *****************************************************************************
  * File        : ConsoleProgressBar.cs
- * Description : ¿ØÖÆÌ¨½ø¶ÈÌõ
+ * Description : æ§åˆ¶å°è¿›åº¦æ¡
  * Version     : 1.0
  * Created     : 2020/02/23
  * Author      : Hant
@@ -13,22 +13,22 @@ using System.Text;
 namespace Hant.Helper
 {
     /// <summary>
-    /// ¿ØÖÆÌ¨½ø¶ÈÌõ
+    /// æ§åˆ¶å°è¿›åº¦æ¡
     /// </summary>
     public class ConsoleProgressBar
     {
         /// <summary>
-        /// ½ø¶ÈÃèÊö¸ñÊ½»¯Ä£°å
+        /// è¿›åº¦æè¿°æ ¼å¼åŒ–æ¨¡æ¿
         /// </summary>
-        private const string DESC_FORMAT = "\0{0,4:F1}%\n";
+        private const string DESC_FORMAT = "\0{0,4:F0}%\n";
 
         /// <summary>
-        /// ½ø¶ÈÃèÊöÄÚÈİµÄ³¤¶È
+        /// è¿›åº¦æè¿°å†…å®¹çš„é•¿åº¦
         /// </summary>
-        private const int DESC_LENGTH = 6;
+        private const int DESC_LENGTH = 5;
 
         /// <summary>
-        /// Í¬²½Ëø
+        /// åŒæ­¥é”
         /// </summary>
         private static readonly object locker = new object();
 
@@ -45,13 +45,13 @@ namespace Hant.Helper
         private char[] output;
 
         /// <summary>
-        /// ¹¹Ôìº¯Êı
+        /// æ„é€ å‡½æ•°
         /// </summary>
-        /// <param name="title">½ø¶ÈÌõ±êÌâ</param>
-        /// <param name="blockContent">½ø¶È·ûÄÚÈİ</param>
-        /// <param name="blockWidth">½ø¶È·ûÇøÓòµÄ¿í¶È</param>
-        /// <param name="minValue">×îĞ¡½ø¶ÈÖµ</param>
-        /// <param name="maxValue">×î´ó½ø¶ÈÖµ</param>
+        /// <param name="title">è¿›åº¦æ¡æ ‡é¢˜</param>
+        /// <param name="blockContent">è¿›åº¦ç¬¦å†…å®¹</param>
+        /// <param name="blockWidth">è¿›åº¦ç¬¦åŒºåŸŸçš„å®½åº¦</param>
+        /// <param name="minValue">æœ€å°è¿›åº¦å€¼</param>
+        /// <param name="maxValue">æœ€å¤§è¿›åº¦å€¼</param>
         public ConsoleProgressBar(
             string title = "",
             char blockContent = '*',
@@ -77,11 +77,11 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ¹¹½¨Êä³ö
+        /// æ„å»ºè¾“å‡º
         /// </summary>
-        /// <param name="title">½ø¶ÈÌõ±êÌâ</param>
-        /// <param name="blockWidth">½ø¶È·ûÇøÓòµÄ¿í¶È</param>
-        /// <returns>Êä³öÄÚÈİ</returns>
+        /// <param name="title">è¿›åº¦æ¡æ ‡é¢˜</param>
+        /// <param name="blockWidth">è¿›åº¦ç¬¦åŒºåŸŸçš„å®½åº¦</param>
+        /// <returns>è¾“å‡ºå†…å®¹</returns>
         private char[] CreateOutput(
             in string title,
             in int blockWidth)
@@ -104,13 +104,13 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ¸üĞÂÊä³ö
+        /// æ›´æ–°è¾“å‡º
         /// </summary>
-        /// <param name="output">Êä³öÄÚÈİ</param>
-        /// <param name="blockStartIndex">½ø¶È·ûÆğÊ¼Ë÷Òı</param>
-        /// <param name="singleBlockProgress">µ¥Ò»½ø¶È·û±íÊ¾µÄ½ø¶È</param>
-        /// <param name="fillModulus">Ìî³äÏµÊı</param>
-        /// <returns>¸üĞÂºóµÄÊä³öÄÚÈİ</returns>
+        /// <param name="output">è¾“å‡ºå†…å®¹</param>
+        /// <param name="blockStartIndex">è¿›åº¦ç¬¦èµ·å§‹ç´¢å¼•</param>
+        /// <param name="singleBlockProgress">å•ä¸€è¿›åº¦ç¬¦è¡¨ç¤ºçš„è¿›åº¦</param>
+        /// <param name="fillModulus">å¡«å……ç³»æ•°</param>
+        /// <returns>æ›´æ–°åçš„è¾“å‡ºå†…å®¹</returns>
         private char[] UpdateOutput(
             in char[] output,
             in int blockWidth,
@@ -140,9 +140,9 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ¸üĞÂ½ø¶È
+        /// æ›´æ–°è¿›åº¦
         /// </summary>
-        /// <param name="value">µ±Ç°½ø¶ÈÖµ</param>
+        /// <param name="value">å½“å‰è¿›åº¦å€¼</param>
         public void UpdateProgress(double value)
         {
             lock (locker)
@@ -177,12 +177,12 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ¼ÆËãÌî³äÏµÊı
+        /// è®¡ç®—å¡«å……ç³»æ•°
         /// </summary>
-        /// <param name="value">µ±Ç°½ø¶ÈÖµ</param>
-        /// <param name="minValue">×îĞ¡½ø¶ÈÖµ</param>
-        /// <param name="maxValue">×î´ó½ø¶ÈÖµ</param>
-        /// <returns>Ìî³äÏµÊı</returns>
+        /// <param name="value">å½“å‰è¿›åº¦å€¼</param>
+        /// <param name="minValue">æœ€å°è¿›åº¦å€¼</param>
+        /// <param name="maxValue">æœ€å¤§è¿›åº¦å€¼</param>
+        /// <returns>å¡«å……ç³»æ•°</returns>
         private double CalculateFillModulus(
             in double value,
             in double minValue,
@@ -193,7 +193,7 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ÏÔÊ¾Êä³öÄÚÈİ
+        /// æ˜¾ç¤ºè¾“å‡ºå†…å®¹
         /// </summary>
         private void DisplayOutput(char[] output)
         {
@@ -201,11 +201,11 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// Ä¨È¥Êä³öÄÚÈİ
+        /// æŠ¹å»è¾“å‡ºå†…å®¹
         /// </summary>
-        /// <param name="cursorLeft">¹â±ê×óÆğÎ»ÖÃ</param>
-        /// <param name="cursorTop">¹â±êÉÏÆğÎ»ÖÃ</param>
-        /// <param name="width">Òª²Á³ıµÄ¿í¶È</param>
+        /// <param name="cursorLeft">å…‰æ ‡å·¦èµ·ä½ç½®</param>
+        /// <param name="cursorTop">å…‰æ ‡ä¸Šèµ·ä½ç½®</param>
+        /// <param name="width">è¦æ“¦é™¤çš„å®½åº¦</param>
         public void EraseOutput(
             in int cursorLeft,
             in int cursorTop,
@@ -220,9 +220,9 @@ namespace Hant.Helper
         }
 
         /// <summary>
-        /// ÏÔÊ¾½ø¶ÈÌõ
+        /// æ˜¾ç¤ºè¿›åº¦æ¡
         /// </summary>
-        /// <returns>µ±Ç°ÊµÀı</returns>
+        /// <returns>å½“å‰å®ä¾‹</returns>
         public ConsoleProgressBar Show()
         {
             lock (locker)

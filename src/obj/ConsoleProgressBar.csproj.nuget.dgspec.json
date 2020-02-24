@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\_coding\\repository_github\\ConsoleProgressBar\\ConsoleProgressBar.csproj": {}
+    "E:\\_coding\\repository_github\\ConsoleProgressBar\\src\\ConsoleProgressBar.csproj": {}
   },
   "projects": {
-    "E:\\_coding\\repository_github\\ConsoleProgressBar\\ConsoleProgressBar.csproj": {
+    "E:\\_coding\\repository_github\\ConsoleProgressBar\\src\\ConsoleProgressBar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\_coding\\repository_github\\ConsoleProgressBar\\ConsoleProgressBar.csproj",
+        "projectUniqueName": "E:\\_coding\\repository_github\\ConsoleProgressBar\\src\\ConsoleProgressBar.csproj",
         "projectName": "ConsoleProgressBar",
-        "projectPath": "E:\\_coding\\repository_github\\ConsoleProgressBar\\ConsoleProgressBar.csproj",
+        "projectPath": "E:\\_coding\\repository_github\\ConsoleProgressBar\\src\\ConsoleProgressBar.csproj",
         "packagesPath": "C:\\Users\\timha\\.nuget\\packages\\",
-        "outputPath": "E:\\_coding\\repository_github\\ConsoleProgressBar\\obj\\",
+        "outputPath": "E:\\_coding\\repository_github\\ConsoleProgressBar\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"

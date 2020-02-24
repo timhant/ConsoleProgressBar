@@ -1,4 +1,4 @@
-﻿using Hant.Helper;
+using Hant.Helper;
 using System;
 using System.Threading;
 
@@ -15,7 +15,7 @@ namespace ConsoleProgress
 
             for (int i = 0; i <= 100; i++)
             {
-                Thread.Sleep(50);
+                Thread.Sleep(25);
                 pBar.UpdateProgress(i);
             }
 
@@ -29,7 +29,7 @@ namespace ConsoleProgress
 
             for (int i = 0; i <= 100; i++)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(25);
 
                 for (int j = 0; j < pBars.Length; j++)
                 {
@@ -48,7 +48,7 @@ namespace ConsoleProgress
 
                     for (int i = 0; i <= 100; i++)
                     {
-                        Thread.Sleep(100);
+                        Thread.Sleep(25);
                         pBar.UpdateProgress(i);
                     }
                 }));
