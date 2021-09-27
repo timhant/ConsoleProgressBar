@@ -1,6 +1,7 @@
 [Bb]in/
 [Oo]bj/
 .vs/
+.vscode/
 *.suo
 *.user
 packages/
