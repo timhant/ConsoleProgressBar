@@ -127,9 +127,7 @@ namespace Hant.Helper
                     blockContent : '\0';
             }
 
-            var desc = String.Format(
-                DESC_FORMAT,
-                fillModulus).ToCharArray();
+            var desc = String.Format(DESC_FORMAT, fillModulus).ToCharArray();
 
             for (int i = 0; i < desc.Length - 1; i++)
             {
@@ -147,6 +145,8 @@ namespace Hant.Helper
         {
             lock (locker)
             {
+                Console.CursorVisible = false;
+
                 var currentCursorPosition =
                    (left: Console.CursorLeft, top: Console.CursorTop);
                 var fillModulus = CalculateFillModulus(
@@ -173,6 +173,8 @@ namespace Hant.Helper
                 Console.SetCursorPosition(
                     currentCursorPosition.left,
                     currentCursorPosition.top);
+
+                Console.CursorVisible = true;
             }
         }
 

@@ -1,0 +1,9 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+*.suo
+*.user
+packages/
+build/
+src/bin/
+src/obj/
